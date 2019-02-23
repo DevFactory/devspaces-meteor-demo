@@ -1,0 +1,20 @@
+--- # devspaces.yml
+name: ds-meteor-demo
+description: MeteorJS demo application
+
+docker-file: Dockerfile
+
+docker-build-includes: |
+  **/*
+
+ports:
+  - protocol: http
+    port-number: 3000
+    description: web app http port
+
+sync-ignore: |
+  .git
+  .idea
+  **/node_modules
+  .DS_Store
+  .meteor/local
